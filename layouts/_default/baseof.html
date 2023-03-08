@@ -22,7 +22,7 @@
   {{ partial "link.html" . }}
 </head>
 
-<body class="m-0 text-gray-700 dark:text-gray-200 dark:bg-dark">
+<body class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-400">
   <div id="top"></div>
   <header class="">
     {{- partial "nav.html" . -}}
@@ -35,9 +35,6 @@
   <footer>
     {{- partial "copyright.html" . -}}
   </footer>
-
-
-  <a class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400" href="#top">↑</a>
 
   {{ partial "dev-size-indicator.html" . }}
   {{- partial "script.html" . -}}

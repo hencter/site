@@ -1,29 +1,29 @@
-<article>
+<article class="my-1 border-rd-2 hover:bg-neutral-50">
     <header>
-        <h1 id="{{.Title}}"><a class="decoration-none text-gray-700" href="{{.Permalink}}">{{ .Title }}</a></h1>
+        <h1 id="{{.Title}}"><a class="decoration-none text-dark dark:text-light op80 hover:op100" href="{{.Permalink}}">{{ .Title }}</a></h1>
         <p>
-            <time>{{ .Date | time.Format ":date_full" }}</time>
+            <time class="text-sm text-dark dark:text-light op80">{{ .Date | time.Format ":date_full" }}</time>
             {{/* <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</time> */}}
             <br>
             <span>
                 {{ with .Params.categories -}}
                 {{ range . -}}
-                [<a class="decoration-none" href='{{ "categories/" | absURL }}{{ . | urlize }}'>{{- . -}}</a>]
+                [<a class="decoration-none op80 hover:op100 text-rose dark:text-rose" href='{{ "categories/" | absURL }}{{ . | urlize }}'>{{- . -}}</a>]
                 {{ end -}}
                 {{ end -}}
             </span>
             <span>
                 {{ with .Params.tags -}}
                 {{ range . -}}
-                #<a class="decoration-none" href='{{ "tags/" | absURL }}{{ . | urlize }}'>{{- . -}}</a>
+                #<a class="decoration-none op80 hover:op100 text-pink dark:text-pink" href='{{ "tags/" | absURL }}{{ . | urlize }}'>{{- . -}}</a>
                 {{ end -}}
                 {{ end -}}
             </span>
         </p>
 
     </header>
-    <p>
+    <p class="">
         {{ .Summary }}
-        <a href="{{.Permalink}}">...</a>
+        <a class="decoration-none" href="{{.Permalink}}">...</a>
     </p>
 </article>
