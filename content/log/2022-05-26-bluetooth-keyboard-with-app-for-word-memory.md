@@ -5,7 +5,6 @@ slug = 'bluetooth-keyboard-with-app-for-word-memory'
 categories = ["不背单词"]
 tags = ['Memory']
 title = '不背单词实现键盘控制'
-
 +++
 
 部分参考来自知乎路遥的[蓝牙键盘+不背单词+弯了的 iPadAir3 yyds](https://zhuanlan.zhihu.com/p/427119932 "作者（知乎）：璐瑶")
@@ -26,3 +25,6 @@ title = '不背单词实现键盘控制'
 - 「继续」和「看答案」在 Android 端上好像没有映射， 端上有映射（我没有 iPad 所以未验证）
 
 [^红米K30ProZoom]: https://www.mi.com/redmik30pro
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDQxNDc0NTY5XX0=
+-->
