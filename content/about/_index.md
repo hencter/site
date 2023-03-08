@@ -4,8 +4,7 @@ slug = "about"
 title = '关于'
 +++
 
-
-![亦幸](/media/hencter.jpg)
+![亦幸的头像](https://s2.loli.net/2023/03/08/fmZLkahTXizeN6x.jpg "亦幸 DELETE ME")
 
 ## 我？
 
@@ -56,3 +55,6 @@ title = '关于'
 ## 内容管理
 
 - Visual Studio Code
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTUwMTM2MTY0XX0=
+-->
