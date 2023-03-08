@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<section id="taxonomies" class="flex m-a">
+  {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+  <div id="taxonomy">
+    {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+    <h2>
+      <a class='decoration-none' href="{{$taxonomy_term | absURL}}">{{ i18n $taxonomy_term }}</a>
+    </h2>
+
+    <div class="flex flex-wrap gap-4 justify-center">
+      {{ range $key, $value := $taxonomy }}
+      <a class='decoration-none p-1 rd-1 text-dark-{{.Count}} bg-stone-{{.Count}} dark:bg-black dark:c-light-{{.Count}}'
+        href="{{ $taxonomy_term | absURL }}/{{ $key }}">
+        <span>
+          {{ .Page.Title }}
+          <sup class="c-dark-{{.Count}} dark:text-light{{.Count}}">{{- .Count -}}</sup>
+        </span>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</section>
+
+{{ end }}

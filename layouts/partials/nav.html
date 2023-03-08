@@ -1,0 +1,14 @@
+<nav class="flex flex-wrap justify-between p-10">
+  <div class="c-dark">
+    {{ .Site.Title }}
+  </div>
+  {{/* Menus */}}
+  
+  <div class="m-r-0">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a class='decoration-none  c-dark dark:c-light   {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}c-rose dark:c-rose{{end}} '
+      href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+</nav>

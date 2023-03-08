@@ -1,0 +1,3 @@
+{
+	"base_url": "{{ .Site.BaseURL }}"
+}

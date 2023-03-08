@@ -1,0 +1,19 @@
+{{ range .Param "js" }}
+<script src="{{ site.Params.cdn }}{{ . }}" crossorigin></script>
+{{ end }}
+
+<script>
+  // pass unocss options
+  window.__unocss = {
+    rules: [
+      // custom rules...
+    ],
+    presets: [
+      // custom presets...
+    ],
+    // ...
+  }
+</script>
+
+{{ $index := resources.Get "js/index.js" | js.Build "main.js" }}
+<script type="module" src="{{- $index.RelPermalink -}}" defer></script>

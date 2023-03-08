@@ -1,0 +1,18 @@
+{{/*
+* https://fontawesome.com/icons
+* default: classic
+* Style:
+* - solid
+* - regular
+* - light
+* - thin
+* - duotone
+TODO: sharp 未完成
+*/}}
+{{ $sharp := .Get "sharp"}}
+{{ $brand := .Get "brand"}}
+{{ $icon := .Get "icon"}}
+{{ $size := .Get "size"}}
+{{ $style := .Get "style"}}
+<i class='{{ with $style -}}fa-{{.}}{{ end -}} {{ with $brand }}fa-brands{{ else }}{{ end }} fa-{{$icon}}'></i>
+{{/*  {{.Params}}  */}}

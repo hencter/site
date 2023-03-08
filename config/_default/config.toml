@@ -1,0 +1,14 @@
+# 站点
+baseURL = '/'
+title = "亦幸小阁"
+copyright = "版权所有"
+sectionPagesMenu = "main"
+languageCode = 'zh'
+
+# 内容
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true
+enableEmoji = true
+# enableGitInfo = true
+
+

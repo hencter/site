@@ -1,0 +1,9 @@
+cdn = "//unpkg.com/"
+
+js = [
+	"@unocss/runtime",
+]
+
+css = [
+	# "heti/umd/heti.min.css"
+]

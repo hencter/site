@@ -1,0 +1,3 @@
+{{ range .Param "css" }}
+<link rel="stylesheet" href="{{ site.Params.cdn }}{{ . }}">
+{{ end }}

@@ -1,0 +1,10 @@
+[WordCount]
+other = '{{ .WordCount }} words.'
+[ReadingTime]
+other = 'about need {{.ReadingTime}} min'
+[categories]
+[Categories]
+other = "Categories"
+[tags]
+[Tags]
+other = "Tags"

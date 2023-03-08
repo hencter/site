@@ -1,0 +1,20 @@
+<div class='heti heti--{{.Get "style"}}'>
+  {{ with .Get "title" }}
+  <h2 id='{{ $.Get "title"}}'>{{ . }}</h2>{{ end }}
+  {{- with $.Get "author" }}
+  <p class="heti-meta heti-small">
+      作者：
+      {{ with $.Get "abbr" }}
+      <abbr title="{{ $.Get " abbr" }}">
+          {{ $.Get "author" }}
+      </abbr>
+      {{ else }}
+      {{ $.Get "author" }}
+      {{ end }}
+      {{ with $.Get "time"}}
+      ·&nbsp;<time>{{ $.Get "time" }}</time>
+      {{ end}}
+  </p>
+  {{- end }}
+  {{- .Inner | markdownify -}}
+</div>
