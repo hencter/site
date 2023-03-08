@@ -6,7 +6,7 @@ description = '新键盘体验——VXB67'
 tags = ['keyboard', 'new', 'life']
 categories = ["键盘", '记录', '生活']
 images = ['https://oss.varmilo.cn/varmilo_asset/v1/images/cn/detailed_banner_images/percent_65/subject/banner/20220526094230.png'] # 文章封面
-# draft = true # 是否为草稿
+# draft = true
 +++
 
 昨天买的新键盘[^新键盘]到手了，体验感觉十分良好，在这里教程简单，这里对**官方说明书**[^官方说明书]中的按键做整理
@@ -27,3 +27,6 @@ images = ['https://oss.varmilo.cn/varmilo_asset/v1/images/cn/detailed_banner_ima
    > - 2 秒内连续敲击按空格键三下，数字 1 或 2 或 3 键灯闪烁，键盘开机。
 
 未完待续···
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIzMTcwODc1M119
+-->
