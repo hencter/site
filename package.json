@@ -6,18 +6,11 @@
   "name": "hencter.github.io",
   "version": "0.1.0",
   "scripts": {
-    "uno:dev": "unocss \"layouts/**/**/*.html\" -w -o ./assets/css/unocss/unocss.css",
-    "uno-app": "unocss \"layouts/_default/**/*.html\" \"layouts/partials/**/*.html\" \"layouts/index.html\" --watch -o ./assets/css/unocss/main.css",
-    "hugo:dev": "hugo server  --disableFastRender",
-    "dev": "npm run uno:dev & npm run hugo:dev",
-    "build": "hugo --gc --minify"
+    "clean": "rm -rf resources public .hugo_build.lock",
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.32",
-    "@unocss/cli": "^0.50.4",
-    "@unocss/preset-icons": "^0.50.4",
-    "@unocss/preset-typography": "^0.50.4",
-    "@unocss/preset-uno": "^0.50.4",
-    "@unocss/preset-web-fonts": "^0.50.4"
+
   }
 }
