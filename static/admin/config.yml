@@ -13,13 +13,11 @@ local_backend: true
 # 编辑工作流程
 publish_mode: editorial_workflow
 
-
 # 全局静态文件上传目录
-media_folder: "static/img/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img/upload" # Media files will be stored in the repo under images/uploads
+public_folder: "/img/upload" # The src attribute for uploaded media will begin with /images/uploads
 
 media_folder_relative: true
-
 
 
 collections:
@@ -35,10 +33,11 @@ collections:
       summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
-    meta: { path: { widget: string, label: 'Path', index_file: 'index', hint: 'markdown文件路径, 对于page bundle, 如 "一级目录/二级目录/page-bundle目录/index.md", 只需要填写 "一级目录/二级目录/page-bundle目录",不
-要忘记填写page-bundle目录' } }
+    meta: {  path: {widget: string, label: 'Path', index_file: 'index', hint: 'markdown文件路径, 对于page bundle, 如 "一级目录/二级目录/page-bundle目录/index.md", 只需要填写 "一级目录/二级目录/page-bundle目录",不要忘记填写page-bundle目录' }}
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+		editor:
+    	preview: false
     fields: # The fields for each document, usually in front matter
       - {label: "标题", name: "title", widget: "string", hint: "文章标题"}
       - {label: "标识", name: "slug", widget: "string", required: false, hint: "Slug 可以是目录,如 linux/archlinux, 此项会作为路径的功能可能会被 path meta 覆盖"}
@@ -46,4 +45,3 @@ collections:
       - {label: "发布日期", name: "date", widget: "datetime"}
       - {label: "封面", name: "cover", widget: "image", required: false, hint: "封面图片"}
       - {label: "标签", name: "tags", widget: "list", required: false, "文章标签，用半角逗号分隔"}
-      - {label: "Body", name: "body", widget: "markdown", hint: "博客正文"}

@@ -16,4 +16,4 @@
 </script>
 
 {{ $index := resources.Get "js/index.js" | js.Build "main.js" }}
-<script type="module" src="{{- $index.RelPermalink -}}" defer></script>
+<script src="{{- $index.RelPermalink -}}" defer></script>

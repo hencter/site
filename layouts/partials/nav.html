@@ -1,12 +1,15 @@
 <nav class="flex flex-wrap justify-between p-10 text-5">
   <div class="">
-    <a class="decoration-none text-dark dark:text-light  op30 hover:op80" href="/">
-      {{ .Site.Title }}
-    </a>
+    <h1>
+      <a class="decoration-none text-dark dark:text-light  {{ if .IsHome }} op:60 {{ else }} op30 {{ end }}  hover:op80 "
+        href="/">
+        {{ .Site.Title }}
+      </a>
+    </h1>
   </div>
   {{/* Menus */}}
 
-  <div class="m-r-0   self-center ">
+  <div class="m-r-0  self-center ">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <a class='decoration-none text-dark dark:text-light hover:op80 {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} op60 {{ else }} op30 {{end}} '

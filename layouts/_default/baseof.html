@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <title>
-    {{- .Site.Title -}} {{ if .Title -}} · {{ .Title }} {{else -}} {{ end -}}
+    {{ .Site.Title }} {{ if .Title -}} · {{ .Title }} {{else -}} {{ end -}}
   </title>
   <style>
     [un-cloak] {
@@ -18,23 +18,41 @@
     html {
       scroll-behavior: smooth;
     }
+
+    article img {
+      width: 100%;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+
+    .highlight pre {
+      overflow-x: auto;
+      border-radius: 5px;
+      padding: 10px;
+    }
   </style>
   {{ partial "link.html" . }}
 </head>
 
-<body class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-400">
-  <div id="top"></div>
-  <header class="">
+<body class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-250">
+  <header id="top" class="">
     {{- partial "nav.html" . -}}
   </header>
 
-  <main id="main" class="{{ if .IsHome }} {{ else }} px-8 py-10 md-w-prose lg-w-prose xl-w-prose m-a {{ end }}">
+  {{ if .IsHome }}
+
+  {{ block "main" . -}}{{ end -}}
+
+  {{ else }}
+
+  <main id="main" class="px-8 py-10 md-w-prose lg-w-prose xl-w-prose m-a">
     {{ block "main" . -}}{{ end -}}
   </main>
 
   <footer>
     {{- partial "copyright.html" . -}}
   </footer>
+  {{ end }}
 
   {{ partial "dev-size-indicator.html" . }}
   {{- partial "script.html" . -}}

@@ -1,7 +1,7 @@
 [WordCount]
 other = '{{.WordCount}} 字'
 [ReadingTime]
-other = '大约需要 {{.ReadingTime}} 分钟'
+other = '{{.ReadingTime}} 分钟'
 [categories]
 other = "分类"
 [Categories]
