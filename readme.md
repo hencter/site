@@ -1,7 +1,5 @@
-# hencter.github.io
+# hencter's blog
 
-我的个人博客
+## Site status
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MzcwODU2Ml19
--->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/00418a0d-afe4-4799-9ff3-a9b2c862beaa/deploy-status)](https://app.netlify.com/sites/hencte/deploys)
