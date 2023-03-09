@@ -1,5 +1,5 @@
 # 站点
-baseURL = '/'
+baseURL = 'http://localhost:1313/'
 title = "亦幸小阁"
 copyright = "版权所有"
 sectionPagesMenu = "main"
