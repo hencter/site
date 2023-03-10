@@ -5,7 +5,7 @@ date = '2022-11-19T11:34:23+08:00'
 description = '新键盘体验——VXB67'
 tags = ['keyboard', 'new', 'life']
 categories = ["键盘", '记录', '生活']
-images = ['https://oss.varmilo.cn/varmilo_asset/v1/images/cn/detailed_banner_images/percent_65/subject/banner/20220526094230.png'] # 文章封面
+images = ['https://s2.loli.net/2023/03/10/AonrpEfckWGTZ2L.jpg'] # 文章封面
 # draft = true
 +++
 
