@@ -14,7 +14,7 @@ IsSection = true
 ## 待办
 
 - [ ] [{{< ref "windows" >}}]({{< ref "windows" >}})
-{.list-none}
+{.px0 .list-none}
 
 ## 社区
 
