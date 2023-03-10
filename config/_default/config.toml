@@ -9,6 +9,6 @@ languageCode = 'zh'
 defaultContentLanguage = 'zh'
 hasCJKLanguage = true
 enableEmoji = true
-# enableGitInfo = true
-
+enableGitInfo = true
+enableInlineShortcodes = true # Default value: false
 
