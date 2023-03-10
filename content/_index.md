@@ -10,7 +10,7 @@ IsSection = true
 [关于]({{< ref "about">}})
 {.text-center}
 
-## 社区{.text-center}
+## 社区{.text-center .text-gray}
 
 [Github](https://github.com/hencter) ·
 [V2EX](https://www.v2ex.com/member/hencte) ·
@@ -22,12 +22,12 @@ IsSection = true
 [掘金](https://juejin.cn/user/78820569790024)
 {.text-center .hover:transform-scale-110}
 
-## 站点状态{.text-center}
+## 站点状态{.text-center .text-gray}
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/00418a0d-afe4-4799-9ff3-a9b2c862beaa/deploy-status)](https://app.netlify.com/sites/hencte/deploys)
 {.text-center}
 
-## 待办
+<!-- ## 待办{.text-gray}
 
 - [ ] [{{< ref "windows" >}}]({{< ref "windows" >}})
-{.px0 .list-none}
+{.px0 .list-none} -->
