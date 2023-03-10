@@ -1,4 +1,5 @@
-<a class="decoration-none text-dark dark:text-light op80 hover:op100" href="{{.Permalink}}" title="{{ .Params.Description }}">
+<a class="decoration-none text-dark dark:text-light op80 hover:op100" href="{{.Permalink}}"
+    title="{{ .Params.Description }}">
     <article class="my-1 border-rd-2 my5 shadow hover:bg-neutral-50 hover:transform-scale-105">
         {{ range .Params.images }}
         <img class="w-full " src="{{ . }}" alt="">
@@ -27,8 +28,7 @@
                 </span>
             </p>
             <p class="">
-                {{ .Summary }}
-                <a class="decoration-none" href="{{.Permalink}}">...</a>
+                {{ .Summary }}···
             </p>
         </header>
     </article>

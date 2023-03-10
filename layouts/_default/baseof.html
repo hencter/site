@@ -19,17 +19,48 @@
       scroll-behavior: smooth;
     }
 
+    article a {
+      color: rosybrown;
+      text-decoration: none;
+      
+    }
+
+    article a:visited {
+      color: gray;
+    }
+
+    article a:hover {
+      color: #fecaca;
+      text-decoration: underline dotted;
+    }
+
     article img {
-      width: 100%;
+      max-width: 100%;
       border-radius: 5px;
       vertical-align: middle;
     }
 
+    pre,
     .highlight pre {
       overflow-x: auto;
       border-radius: 5px;
       padding: 10px;
     }
+
+    /*  目录样式  */
+    #TableOfContents a {
+      text-decoration: none;
+      color: rosybrown;
+    }
+    #TableOfContents a:visited {
+      text-decoration: none;
+      color: gray;
+    }
+    #TableOfContents a:hover {
+      text-decoration: none;
+      color: black;
+    }
+
   </style>
   {{ partial "link.html" . }}
 </head>
