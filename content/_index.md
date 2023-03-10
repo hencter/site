@@ -8,13 +8,18 @@ IsSection = true
 
 ## 小站
 
-[日志](https://hencter.top/log) ·
-[关于](https://hencter.top/about)
+[日志]({{< ref "log" >}}) ·
+[关于]({{< ref "about">}})
+
+## 待办
+
+- [ ] [{{< ref "windows" >}}]({{< ref "windows" >}})
+{.list-none}
 
 ## 社区
 
 [Github](https://github.com/hencter) ·
-[V2EX](https://www.v2ex.com/member/hencte)·
+[V2EX](https://www.v2ex.com/member/hencte) ·
 [Steam](https://steamcommunity.com/id/hencter/)
 
 [码云](https://gitee.com/hencter) ·

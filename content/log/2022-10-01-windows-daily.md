@@ -1,6 +1,6 @@
 +++
 title = 'Windows 基本安装与维护'
-slug = 'windows'
+slug = 'windows-daily'
 date = '2022-10-01T17:05:56+08:00' 
 categories = ["系统", "维护"]
 tags = ["Windows"]

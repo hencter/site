@@ -3,6 +3,21 @@ title = "备忘"
 weight = 3
 +++
 
-开发备忘录
+用来放置一些最近在看的内容
 
-偶然在 Github 上看到这个 <https://wangchujiang.com/reference/> 感觉挺方便的，故想用 Hugo 这里实现一下
+- <https://wangchujiang.com/reference/>
+
+> foo
+> bar
+{.myclass}
+
+- Fruit
+  - Apple
+  - Orange
+  - Banana
+  {.fruits}
+- Dairy
+  - Milk
+  - Cheese
+  {.dairies}
+{.list}
