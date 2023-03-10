@@ -1,7 +1,20 @@
 {{ define "main" }}
+<main id="main" class="px-10 py-10 md-w-prose lg-w-prose xl-w-prose m-a">
+    <article>
+        {{ .Content }}
+    </article>
 
-<article class="">
-    {{ .Content }}
-</article>
+    {{/*  <!-- Groups content by month according to the "lastMod" field in front matter -->
+    {{ range .Pages.GroupByLastmod "2006" }}
+    <h3>{{ .Key }}</h3>
+    <ul>
+        {{ range .Pages }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a> {{ .Lastmod | time.Format ":date_long"}}{{ .Lastmod | time.Format ":time_full"}}
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}  */}}
 
+</main>
 {{ end }}
