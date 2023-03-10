@@ -22,7 +22,7 @@
     article a {
       color: rosybrown;
       text-decoration: none;
-      
+
     }
 
     article a:visited {
@@ -52,15 +52,16 @@
       text-decoration: none;
       color: rosybrown;
     }
+
     #TableOfContents a:visited {
       text-decoration: none;
       color: gray;
     }
+
     #TableOfContents a:hover {
       text-decoration: none;
       color: black;
     }
-
   </style>
   {{ partial "link.html" . }}
 </head>
@@ -70,20 +71,13 @@
     {{- partial "nav.html" . -}}
   </header>
 
-  {{ if .IsHome }}
-
-  {{ block "main" . -}}{{ end -}}
-
-  {{ else }}
-
-  <main id="main" class="px-8 py-10 md-w-prose lg-w-prose xl-w-prose m-a">
+  <main id="main" class="px-10 py-10 md-w-prose lg-w-prose xl-w-prose m-a">
     {{ block "main" . -}}{{ end -}}
   </main>
 
   <footer>
     {{- partial "copyright.html" . -}}
   </footer>
-  {{ end }}
 
   {{ partial "dev-size-indicator.html" . }}
   {{- partial "script.html" . -}}
