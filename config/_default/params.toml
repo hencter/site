@@ -1,9 +1,21 @@
-cdn = "//unpkg.com/"
+[js]
 
-js = [
-	"@unocss/runtime",
+cdn = [
+	# "https://cdn.jsdelivr.net/"
 ]
 
-css = [
-	# "heti/umd/heti.min.css"
+default = [
+	"/js/attributify.global.js"
+]
+
+# =============================== #
+
+[css]
+
+cdn = [
+
+]
+
+default = [
+	# "/css/normalize.min.css"
 ]
