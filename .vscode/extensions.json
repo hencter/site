@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "budparr.language-hugo-vscode",
+    "rusnasonov.vscode-hugo",
+    "eliostruyf.vscode-hugo-themer",
+    "bungcip.better-toml"
+  ]
+}
