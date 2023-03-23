@@ -7,10 +7,11 @@
         <header class="px2 py2">
             <h3 id="{{.Title}}">{{ .Title }}</h3>
             <p>
-                <time class="text-sm text-dark dark:text-light op80">{{ .Date | time.Format ":date_full" }}</time>
-                {{/* <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</time> */}}
-                <br>
-                <span>
+                <time class="text-sm text-dark dark:text-light op80">
+                    {{ .Date | time.Format ":date_full" }}
+                </time>
+                {{/*
+                <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</time> */}} <br> <span>
                     {{ with .Params.categories -}}
                     {{ range . -}}
                     [<a class="decoration-none op80 hover:op100 text-rose dark:text-rose"
@@ -23,7 +24,8 @@
                     {{ range . -}}
                     #<a class="decoration-none op80 hover:op100 text-pink dark:text-pink"
                         href='{{ "tags/" | absURL }}{{ . | urlize }}' title="{{.}}">{{- . -}}</a>
-                    {{ end -}}
+                    {{ enate | time.Format ":date_full" }}</time> {{/*
+                <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</d -}}
                     {{ end -}}
                 </span>
             </p>
