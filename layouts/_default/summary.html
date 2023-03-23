@@ -1,37 +1,38 @@
-<a class="decoration-none text-dark dark:text-light op80 hover:op100" href="{{.Permalink}}"
-    title="{{ .Params.Description }}">
-    <article class="my-1 border-rd-2 my5 shadow hover:bg-neutral-50 hover:transform-scale-105">
-        {{ range .Params.images }}
-        <img class="w-full " src="{{ . }}" alt="">
-        {{ end }}
-        <header class="px2 py2">
-            <h3 id="{{.Title}}">{{ .Title }}</h3>
-            <p>
-                <time class="text-sm text-dark dark:text-light op80">
-                    {{ .Date | time.Format ":date_full" }}
-                </time>
-                {{/*
-                <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</time> */}} <br> <span>
-                    {{ with .Params.categories -}}
-                    {{ range . -}}
-                    [<a class="decoration-none op80 hover:op100 text-rose dark:text-rose"
-                        href='{{ "categories/" | absURL }}{{ . | urlize }}' title="{{.}}">{{- . -}}</a>]
-                    {{ end -}}
-                    {{ end -}}
-                </span>
-                <span>
-                    {{ with .Params.tags -}}
-                    {{ range . -}}
-                    #<a class="decoration-none op80 hover:op100 text-pink dark:text-pink"
-                        href='{{ "tags/" | absURL }}{{ . | urlize }}' title="{{.}}">{{- . -}}</a>
-                    {{ enate | time.Format ":date_full" }}</time> {{/*
-                <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</d -}}
-                    {{ end -}}
-                </span>
-            </p>
-            <p class="overflow-auto">
-                {{ .Summary }}···
-            </p>
-        </header>
-    </article>
+<a decoration-none text-dark dark:text-light op80 hover:op100 href="{{.Permalink}}"
+  title="{{ .Params.Description }}">
+  <article class="my-1 border-rd-2 my5 shadow hover:bg-neutral-50 hover:transform-scale-105">
+    {{ range .Params.images }}
+    <img class="w-full " src="{{ . }}" alt="">
+    {{ end }}
+    <header class="px2 py2">
+      <h3 id="{{.Title}}">{{ .Title }}</h3>
+      <p>
+        <time class="text-sm text-dark dark:text-light op80">
+          {{ .Date | time.Format ":date_full" }}
+        </time>
+        {{/*
+
+        <time>·{{ .ReadingTime }}&nbsp;{{- i18n "ReadingTime" . -}}</time> */}} <br> <span>
+          {{ with .Params.categories -}}
+          {{ range . -}}
+          [<a class="decoration-none op80 hover:op100 text-rose dark:text-rose"
+            href='{{ "categories/" | absURL }}{{ . | urlize }}' title="{{.}}">{{- . -}}</a>]
+          {{ end -}}
+          {{ end -}}
+        </span>
+        <span>
+          {{ with .Params.tags -}}
+          {{ range . -}}
+          #<a class="decoration-none op80 hover:op100 text-pink dark:text-pink"
+            href='{{ "tags/" | absURL }}{{ . | urlize }}' title="{{.}}">{{- . -}}</a>
+          <time>·&nbsp;{{ i18n "ReadingTime"}}</time>
+          {{ end -}}
+          {{ end -}}
+        </span>
+      </p>
+      <p class="overflow-auto">
+        {{ .Summary }}···
+      </p>
+    </header>
+  </article>
 </a>

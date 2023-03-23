@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <article>
-{{ .Content }}
+    {{ .Content }}
 </article>
 
 {{ range .Pages.GroupByDate "2006" }}
@@ -12,4 +12,6 @@
     {{ end }}
 </section>
 {{ end }}
+
+
 {{ end }}

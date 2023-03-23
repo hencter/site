@@ -3,8 +3,10 @@ other = '{{ .WordCount }} words.'
 [ReadingTime]
 other = 'about need {{.ReadingTime}} min'
 [categories]
+other = "Categories"
 [Categories]
 other = "Categories"
 [tags]
+other = "Tags"
 [Tags]
 other = "Tags"
