@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <title>测试</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div id="app">{{ message }}</div>
 
-    <script type="module">
-      import { createApp } from 'https://esm.sh/vue@3/dist/vue.esm-browser.js'
+<head>
+  <title>测试</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-      createApp({
-        data() {
-          return {
-            message: 'Hello Vue3!'
-          }
+<body>
+  <div id="app">{{ message }}</div>
+
+  <script type="module">
+    import {createApp} from 'https://esm.sh/vue@3/dist/vue.esm-browser.js'
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue3!'
         }
-      }).mount('#app')
-    </script>
-  </body>
+      }
+    }).mount('#app')
+  </script>
+</body>
+
 </html>
