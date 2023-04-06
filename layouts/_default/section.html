@@ -1,15 +1,15 @@
 {{ define "main" }}
 
 <article>
-    {{ .Content }}
+  {{ .Content }}
 </article>
 
 {{ range .Pages.GroupByDate "2006" }}
 <section class="">
-    <h2 class="text-dark op80 dark:text-light ">{{ .Key }}</h2>
-    {{ range .Pages }}
-    {{ .Render "summary"}}
-    {{ end }}
+  <h2 class="text-dark op80 dark:text-light ">{{ .Key }}</h2>
+  {{ range .Pages }}
+  {{ .Render "summary"}}
+  {{ end }}
 </section>
 {{ end }}
 

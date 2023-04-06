@@ -5,7 +5,8 @@
   <div id="taxonomy">
     {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
     <h2>
-      <a class='decoration-none text-dark dark:text-light op50 hover:op80' href="{{$taxonomy_term | absURL}}">{{ i18n $taxonomy_term }}</a>
+      <a class='decoration-none text-dark dark:text-light op50 hover:op80' href="{{$taxonomy_term | absURL}}">{{ i18n
+        $taxonomy_term }}</a>
     </h2>
 
     <div class="flex flex-wrap gap-4 justify-center">
