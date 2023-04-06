@@ -1,112 +1,113 @@
 <!DOCTYPE html>
 <html class="" lang="{{- .Site.LanguageCode -}}" un-cloak>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<head>
+    <title>
+      {{ .Site.Title }} {{ if .Title -}} · {{ .Title }} {{else -}} {{ end -}}
+    </title>
+    <style>
+      [un-cloak] {
+        display: none;
+      }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      html {
+        /* 平滑滚动样式 */
+        scroll-behavior: smooth;
 
-  <title>
-    {{ .Site.Title }} {{ if .Title -}} · {{ .Title }} {{else -}} {{ end -}}
-  </title>
-  <style>
-    [un-cloak] {
-      display: none;
-    }
+      }
+      body {
+        background-repeat: repeat, repeat;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        backdrop-filter: blur(5px);
+      }
 
-    html {
-      /* 平滑滚动样式 */
-      scroll-behavior: smooth;
-    }
+      /* 文章样式 */
+      article a {
+        color: rosybrown;
+        text-decoration: none;
+      }
 
-    /* 文章样式 */
-    article a {
-      color: rosybrown;
-      text-decoration: none;
+      article a:visited {
+        color: gray;
+      }
 
-    }
+      article a:hover {
+        color: rosybrown;
+        text-decoration: underline dotted;
+      }
 
-    article a:visited {
-      color: gray;
-    }
+      article img {
+        max-width: 100%;
+        border-radius: 5px;
+        vertical-align: middle;
+      }
 
-    article a:hover {
-      color: #fecaca;
-      text-decoration: underline dotted;
-    }
+      article del {
+        background-color: black;
+      }
+      article del:hover {
+        color: white;
+      }
 
-    article img {
-      max-width: 100%;
-      border-radius: 5px;
-      vertical-align: middle;
-    }
-
-    /* 由于 采用 class 直接写样式弃用自写样式 */
-    /*
+      /* 由于 采用 class 直接写样式弃用自写样式 */
+      /*
     .task-list li {
       list-style: none;
     }
     */
 
-    /*  脚注样式 */
-    .footnotes hr {
-      border-style: dotted;
-    }
+      /*  脚注样式 */
+      .footnotes hr {
+        border-style: dotted;
+      }
 
-    pre,
-    .highlight pre {
-      overflow-x: auto;
-      border-radius: 5px;
-      padding: 10px;
-    }
+      pre,
+      .highlight pre {
+        overflow-x: auto;
+        border-radius: 5px;
+        padding: 10px;
+      }
 
-    code {
-      opacity: .8;
-    }
+      code {
+        opacity: 0.8;
+      }
 
-    /*  目录样式  */
-    #TableOfContents a {
-      text-decoration: none;
-      color: rosybrown;
-    }
+      /*  目录样式  */
+      #TableOfContents a {
+        text-decoration: none;
+        color: rosybrown;
+      }
 
-    #TableOfContents a:visited {
-      text-decoration: none;
-      color: gray;
-    }
+      #TableOfContents a:visited {
+        text-decoration: none;
+        color: gray;
+      }
 
-    #TableOfContents a:hover {
-      text-decoration: none;
-      color: black;
-    }
-  </style>
-  {{ partial "link.html" . }}
-</head>
+      #TableOfContents a:hover {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+    {{ partial "link.html" . }}
+  </head>
 
-<body class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-250">
+  <body
+    class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-250"
+  >
+    {{ if .IsHome }} {{ block "main" . -}}{{ end -}} {{ else }}
 
-  {{ if .IsHome }}
-  {{ block "main" . -}}{{ end -}}
-  {{ else }}
+    <header id="top" class="">{{- partial "nav.html" . -}}</header>
 
-  <header id="top" class="">
-    {{- partial "nav.html" . -}}
-  </header>
-
-  <main id="main" class="px-10 py-10 md-w-prose lg-w-prose xl-w-prose m-a">
     {{ block "main" . -}}{{ end -}}
-  </main>
 
-  <footer>
-    {{- partial "copyright.html" . -}}
-  </footer>
-  {{ end }}
-
-
-  {{ partial "dev-size-indicator.html" . }}
-  {{- partial "script.html" . -}}
-
-</body>
-
+    <footer>{{- partial "copyright.html" . -}}</footer>
+    {{ end }} {{ partial "dev-size-indicator.html" . }} {{- partial
+    "script.html" . -}}
+  </body>
 </html>

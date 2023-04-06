@@ -1,31 +1,35 @@
 {{ define "main" }}
-<header class="m-b-8">
+<main id="main" class="px-10 py-10 md-w-prose lg-w-prose xl-w-prose m-a">
+  <header class="m-b-8">
 
-  <h1 id="{{.Title}}">
-    <a class="decoration-none text-gray-700" href="{{ if .IsPage }}#{{.Title}}{{ else }}{{.Permalink}}{{ end }}">{{
-      .Title }}</a>
-  </h1>
-  <section class="my5 text-sm">
-    <span>{{ i18n "WordCount" . }}</span>
-    <span>·</span>
-    <span>
-      <time>{{- i18n "ReadingTime" . -}}</time>
-    </span>
-  </section>
-</header>
-<article class="xl-flex xl-flex-row ">
-  <section class="-xl-mr-100 xl-order-last xl-sticky xl-h-full xl-top-10">
-    {{ if .IsPage }} {{ partial "toc.html" . }} {{ else }} {{ end }}
-  </section>
-  <section class="xl-w-prose">
-    {{ .Content }}
-  </section>
-</article>
-<footer class="m-t-8">
-  {{ with .PrevInSection }}
-  <a href="{{.Permalink}}">{{.Title}}</a>
-  {{ end }} {{ with .NextInSection }}
-  <a style="float: right;" href="{{.Permalink}}">{{.Title}}</a>
-  {{ end }}
-</footer>
+    <h1 id="{{.Title}}" text-center>
+      <a class="decoration-none text-gray-700 dark:text-light"
+        href="{{ if .IsPage }}#{{.Title}}{{ else }}{{.Permalink}}{{ end }}">{{
+        .Title }}</a>
+    </h1>
+    <section my5 text-sm text-center>
+      <span>{{ i18n "WordCount" . }}</span>
+      <span>·</span>
+      <span>
+        <time>{{- i18n "ReadingTime" . -}}</time>
+      </span>
+    </section>
+  </header>
+  <article class="xl-flex xl-flex-row ">
+    <section class="-xl-mr-100 xl-order-last xl-sticky xl-h-full xl-top-10">
+      {{ if .IsPage }} {{ partial "toc.html" . }} {{ else }} {{ end }}
+    </section>
+    <section class="xl-w-prose">
+      {{ .Content }}
+    </section>
+  </article>
+  <footer class="m-t-8">
+    {{ with .PrevInSection }}
+    <a decoration-none text-dark dark="text-light" op60 hover="op100" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a decoration-none text-dark dark="text-light" op60 hover="op100" float-right href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+  </footer>
+</main>
 {{ end }}

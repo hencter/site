@@ -1,28 +1,28 @@
 {{ define "main" }}
+<main id="main" class="px-10 py-10 m-a xl-w-5xl">
+  <section id="taxonomies" class="m-a xl-flex">
+    {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+    <div id="{{$taxonomy_term}}">
+      {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+      <h2 text-center>
+        <a class='decoration-none text-dark dark:text-light op50' href="{{$taxonomy_term | absURL}}">{{ i18n
+          $taxonomy_term }}</a>
+      </h2>
 
-<section id="taxonomies" class="m-a">
-  {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
-  <div id="taxonomy">
-    {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
-    <h2>
-      <a class='decoration-none text-dark dark:text-light op50 hover:op80' href="{{$taxonomy_term | absURL}}">{{ i18n
-        $taxonomy_term }}</a>
-    </h2>
-
-    <div class="flex flex-wrap gap-4 justify-center">
-      {{ range $key, $value := $taxonomy }}
-      <a class='decoration-none p-1 rd-1 op50 hover:op80  text-{{.Count}}xl text-dark-{{.Count}} bg-stone-{{.Count}} dark:bg-dark-{{.Count}}00 dark:c-light-{{.Count}}'
-        href="{{ $taxonomy_term | absURL }}/{{ $key }}">
-        <span>
-          {{ .Page.Title }}
-          <sup class=" text-dark-{{.Count}} dark:text-light{{.Count}}">{{- .Count -}}</sup>
-        </span>
-      </a>
+      <div class="flex flex-wrap gap-4 justify-center">
+        {{ range $key, $value := $taxonomy }}
+        <a class='decoration-none p-1 rd-1 op50  hover:transform-scale-150  text-{{.Count}}xl text-dark-{{.Count}} bg-stone-{{.Count}} dark:bg-dark-{{.Count}}00 dark:c-light-{{.Count}}'
+          href="{{ $taxonomy_term | absURL }}/{{ $key }}">
+          <span>
+            {{ .Page.Title }}
+            <sup class=" text-dark-{{.Count}} dark:text-light{{.Count}}">{{- .Count -}}</sup>
+          </span>
+        </a>
+        {{ end }}
+      </div>
       {{ end }}
     </div>
     {{ end }}
-  </div>
-  {{ end }}
-</section>
-
+  </section>
+</main>
 {{ end }}
