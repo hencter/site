@@ -3,6 +3,8 @@
     "budparr.language-hugo-vscode",
     "rusnasonov.vscode-hugo",
     "eliostruyf.vscode-hugo-themer",
-    "bungcip.better-toml"
+    "bungcip.better-toml",
+    "kaellarkin.hugo-shortcode-syntax",
+    "fivethree.vscode-hugo-snippets"
   ]
 }
