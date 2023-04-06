@@ -3,7 +3,7 @@ date = '2022-07-18T10:12:44+08:00'
 slug = 'usage'
 tags = ['Hugo', 'Usage']
 title = 'Hugo 使用'
-draft = true
+draft = false
 +++
 
 ## Hugo 命令行帮助
