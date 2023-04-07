@@ -2,11 +2,11 @@
 const root = document.body.parentElement
 
 let colorMode = localStorage.getItem("color-mode")
-console.log(colorMode);
+// console.log(colorMode);
 root.classList.toggle(colorMode, true)
 
 let media = window.matchMedia('(prefers-color-scheme:dark)');
-console.log(media);
+// console.log(media);
 
 //监听样式切换
 let callback = e => {
@@ -27,6 +27,3 @@ if (typeof media.addEventListener === 'function') {
 } else if (typeof media.addEventListenertener === 'function') {
   media.addEventListenerer(callback);
 }
-
-
-console.log("/assets/js/index.js load success!");
