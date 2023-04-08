@@ -6,8 +6,11 @@ IsSection = true
 
 <!-- 小站施工中··· -->
 
-[日志]({{< ref "log" >}}) ·
-[关于]({{< ref "about">}})
+## 导航{.text-center .text-gray}
+
+[日志]({{< ref "log" >}} "大部分文章都在这里") ·
+[关于]({{< ref "about">}} "关于") ·
+[云盘](https://alist.hencte.top/ "由 Alist 驱动")
 {.text-center}
 
 ## 社区{.text-center .text-gray}
@@ -25,10 +28,7 @@ IsSection = true
 [CSDN](https://blog.csdn.net/hencter)
 {.text-center .hover:transform-scale-110}
 
-## 站点状态{.text-center .text-gray}
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/00418a0d-afe4-4799-9ff3-a9b2c862beaa/deploy-status)](https://app.netlify.com/sites/hencte/deploys)
-{.text-center}
+<!-- ## 站点状态{.text-center .text-gray} -->
 
 <!-- ## 待办{.text-gray}
 
