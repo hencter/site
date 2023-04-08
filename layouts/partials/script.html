@@ -4,3 +4,5 @@
 
 {{ $index := resources.Get "js/index.js" | js.Build "main.js" | resources.Minify }}
 <script src="{{- $index.RelPermalink -}}" defer></script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "960378430174402ebea1f7e9ac09987c"}'></script>

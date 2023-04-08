@@ -1,113 +1,117 @@
 <!DOCTYPE html>
 <html class="" lang="{{- .Site.LanguageCode -}}" un-cloak>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="theme-color" content="#317EFB" />
 
-    <title>
-      {{ .Site.Title }} {{ if .Title -}} · {{ .Title }} {{else -}} {{ end -}}
-    </title>
-    <style>
-      [un-cloak] {
-        display: none;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="theme-color" content="#317EFB" />
 
-      html {
-        /* 平滑滚动样式 */
-        scroll-behavior: smooth;
-      }
-      body {
-        background-repeat: repeat, repeat;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        backdrop-filter: blur(5px);
-      }
+  <title>
+    {{ .Site.Title }} {{ if .Title -}} · {{ .Title }} {{else -}} {{ end -}}
+  </title>
+  <style>
+    [un-cloak] {
+      display: none;
+    }
 
-      /* 文章样式 */
-      article a {
-        color: rosybrown;
-        text-decoration: none;
-      }
+    html {
+      /* 平滑滚动样式 */
+      scroll-behavior: smooth;
+    }
 
-      article a:visited {
-        color: gray;
-      }
+    body {
+      background-repeat: repeat, repeat;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      backdrop-filter: blur(5px);
+    }
 
-      article a:hover {
-        color: rosybrown;
-        text-decoration: underline dotted;
-      }
+    /* 文章样式 */
+    article a {
+      color: rosybrown;
+      text-decoration: none;
+    }
 
-      article img {
-        max-width: 100%;
-        border-radius: 5px;
-        vertical-align: middle;
-      }
+    article a:visited {
+      color: gray;
+    }
 
-      article del {
-        background-color: black;
-      }
-      article del:hover {
-        color: white;
-      }
+    article a:hover {
+      color: rosybrown;
+      text-decoration: underline dotted;
+    }
 
-      /* 由于 采用 class 直接写样式弃用自写样式 */
-      /*
+    article img {
+      max-width: 100%;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+
+    article del {
+      background-color: black;
+    }
+
+    article del:hover {
+      color: white;
+    }
+
+    /* 由于 采用 class 直接写样式弃用自写样式 */
+    /*
     .task-list li {
       list-style: none;
     }
     */
 
-      /*  脚注样式 */
-      .footnotes hr {
-        border-style: dotted;
-      }
+    /*  脚注样式 */
+    .footnotes hr {
+      border-style: dotted;
+    }
 
-      pre,
-      .highlight pre {
-        overflow-x: auto;
-        border-radius: 5px;
-        padding: 10px;
-      }
+    pre,
+    .highlight pre {
+      overflow-x: auto;
+      border-radius: 5px;
+      padding: 10px;
+    }
 
-      code {
-        opacity: 0.8;
-      }
+    code {
+      opacity: 0.8;
+    }
 
-      /*  目录样式  */
-      #TableOfContents a {
-        text-decoration: none;
-        color: rosybrown;
-      }
+    /*  目录样式  */
+    #TableOfContents a {
+      text-decoration: none;
+      color: rosybrown;
+    }
 
-      #TableOfContents a:visited {
-        text-decoration: none;
-        color: gray;
-      }
+    #TableOfContents a:visited {
+      text-decoration: none;
+      color: gray;
+    }
 
-      #TableOfContents a:hover {
-        text-decoration: none;
-        color: black;
-      }
-    </style>
-    {{ partial "link.html" . }}
-  </head>
+    #TableOfContents a:hover {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+  {{ partial "link.html" . }}
+</head>
 
-  <body
-    class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-250"
-  >
-    {{ if .IsHome }} {{ block "main" . -}}{{ end -}} {{ else }}
+<body class="m-0 text-dark dark:text-light bg-neutral-100 dark:bg-dark all:transition-250">
+  {{ if .IsHome }} {{ block "main" . -}}{{ end -}} {{ else }}
 
-    <header id="top" class="">{{- partial "nav.html" . -}}</header>
+  <header id="top" class="">{{- partial "nav.html" . -}}</header>
 
-    {{ block "main" . -}}{{ end -}}
+  {{ block "main" . -}}{{ end -}}
 
-    <footer>{{- partial "copyright.html" . -}}</footer>
-    {{ end }} {{ partial "dev-size-indicator.html" . }} {{- partial
-    "script.html" . -}}
-  </body>
+  <footer>{{- partial "copyright.html" . -}}</footer>
+  
+  {{ end }} {{ partial "dev-size-indicator.html" . }}
+
+  {{- partial "script.html" . -}}
+</body>
+
 </html>
