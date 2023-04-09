@@ -4,6 +4,18 @@
 resources.Minify }}
 <script src="{{- $index.RelPermalink -}}" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/attributify.global.js"></script>
+<script>
+  // pass unocss options
+  window.__unocss = {
+    rules: [
+      // custom rules...
+    ],
+    presets: [
+      // custom presets...
+    ],
+    // ...
+  };
+</script>
 <script
   defer
   src="https://static.cloudflareinsights.com/beacon.min.js"
