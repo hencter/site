@@ -1,8 +1,8 @@
-{{ range .Param "js.default" }}
+{{/*  {{ range .Param "js.default" }}
 <script src="{{ . }}"></script>
-{{ end }}
+{{ end }}  */}}
 
 {{ $index := resources.Get "js/index.js" | js.Build "main.js" | resources.Minify }}
 <script src="{{- $index.RelPermalink -}}" defer></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script> 
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "960378430174402ebea1f7e9ac09987c"}'></script>

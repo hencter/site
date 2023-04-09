@@ -1,7 +1,7 @@
 [js]
 
 cdn = [
-	# "https://cdn.jsdelivr.net/"
+	"https://cdn.jsdelivr.net/"
 ]
 
 default = [
